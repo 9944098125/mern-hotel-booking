@@ -1,0 +1,59 @@
+#####
+POST http://localhost:3500/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"Akella Srinivas",
+    "email":"srinivas72075@gmail.com",
+    "password":"Srinivas@8",
+    "phone":"9944098125",
+    "city":"Kakinada",
+    "country":"India"
+}
+
+########
+POST http://localhost:3500/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"Akella Srinivas Prasad",
+    "password":"Srinivas@8"
+}
+
+
+####
+POST http://localhost:3500/api/hotels
+Content-Type: application/json
+
+{
+    "name":"AS Lodge",
+    "type":"oy rooms",
+    "city":"kakinada",
+    "address":"sridevi colony, indrapalem, kakinada rural - 533006",
+    "distance":"17 km",
+    "title":"pg rooms also available",
+    "desc":"large rooms with 2 beds available",
+    "cheapestPrice":250
+}
+
+########
+GET http://localhost:3500/api/hotels
+
+// CREATE ROOM
+########
+POST http://localhost:3500/api/rooms/62adf84d55014bc12f4eeb2f
+Content-Type: application/json
+
+{
+    "title":"Suite Room",
+    "price":1000,
+    "maxPeople":2,
+    "desc":"This is suite room with 2 large beds and a balcony with fresh air."
+}
+
+#######
+GET http://localhost:3500/api/rooms/62ae002235657df4f49863bc
+
+
+#######
+GET http://localhost:3500/api/rooms
